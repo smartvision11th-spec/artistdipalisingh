@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const selectedWorks = [
 {
 title: "Artwork One",
@@ -43,7 +45,10 @@ return ( <main> <section className="hero"> <div className="container hero-inner"
 
       <div className="hero-artwork">
         <div className="hero-artwork-placeholder">
-          <span>Artwork Image</span>
+          <img
+            src="/artworks/hero.jpg"
+            alt="Featured artwork by Dipali Singh"
+          />
         </div>
 
         <p className="artwork-caption">
@@ -73,7 +78,10 @@ return ( <main> <section className="hero"> <div className="container hero-inner"
             key={work.title}
           >
             <div className="artwork-image-placeholder">
-              <span>Artwork {index + 1}</span>
+              <img
+                src={work.image}
+                alt={work.title}
+              />
             </div>
 
             <div className="artwork-card-info">
@@ -102,7 +110,7 @@ return ( <main> <section className="hero"> <div className="container hero-inner"
         </h2>
 
         <p>
-          Dipali Singh's work explores the relationship between colour,
+          Dipali Singh&apos;s work explores the relationship between colour,
           form, texture, and feeling. Each artwork is developed with a
           focus on the physical qualities of the medium and the character
           of the finished piece.
